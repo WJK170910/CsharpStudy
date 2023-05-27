@@ -119,7 +119,7 @@ namespace BasicKnowledgem
             ////声明
             //int[] intArray2;
 
-            ////实例化
+            ////实例化、初始化
             //intArray2 = new int[] { 1, 23, 2 };
 
             //int[] intArray = new int[] { 1, 23, 2 };
@@ -135,7 +135,7 @@ namespace BasicKnowledgem
             #endregion
 
             #region 字符串的一些方法
-            //string a = "AdamWu";
+            //string a = "Adam";
 
             ////去除首尾的空格
             //a.Trim();
@@ -154,6 +154,16 @@ namespace BasicKnowledgem
             #region 匿名类型
             ////匿名类型声明和初始化需要同时进行，初始化后变量类型不可改变
             //var a = 1;
+            #endregion
+
+            #region 结构体赋值问题
+
+            //Student student1 = new Student() { age = 1, name = "adam" };
+            //Student student2 = new Student();
+
+            //student2 = student1;
+            //student2.age = 2;
+
             #endregion
 
             Console.ReadKey();
@@ -177,8 +187,8 @@ namespace BasicKnowledgem
         #region 结构体
         //struct Student
         //{
-        //    int age;
-        //    string name;
+        //    public int age;
+        //    public string name;
         //    void Print()
         //    {
         //        Console.WriteLine("Hello");
