@@ -14,14 +14,6 @@ namespace BasicKnowledgem
             //Console.WriteLine("Hello World!");
             #endregion
 
-            #region 字符串特殊字符@、$的用法
-            ////@字符：按原义解释字符串，转义字符等无效
-            ////$字符：允许字符串使用变量
-            //string para = "World";
-            //Console.WriteLine($"Hello\n {para}!");
-            //Console.WriteLine(@$"Hello\n {para}!");
-            #endregion
-
             #region 整型拼接的特殊用法
 
             //int a = 1;
@@ -132,23 +124,6 @@ namespace BasicKnowledgem
             ////声明并初始化
             //string a = "shaw";
 
-            #endregion
-
-            #region 字符串的一些方法
-            //string a = "Adam";
-
-            ////去除首尾的空格
-            //a.Trim();
-
-            ////转为大小写
-            //a.ToLower();
-            //a.ToUpper();
-
-
-            ////按某分隔符分割字符串
-            //a.Split(",");
-
-            ////字符串可视作一个字符数组
             #endregion
 
             #region 匿名类型
