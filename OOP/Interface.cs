@@ -11,6 +11,9 @@
         public void Fly()
         {
         }
+        public void Call()
+        {
+        }
     }
 
     public class Bird : IFly

@@ -71,11 +71,22 @@ namespace OOP
             #endregion
 
             #region 里氏转换
-            ////变量声明为父类类型，用子类类型去实例化，无法调用子类的方法
-            ////但因为虚方法有可能被子类重写，故可以调子类重写的方法，若没重写，则调用父类虚方法
+            ////里氏替换原则是指，子类对象可以替换其父类对象，而程序执行效果不变
+            ////因为虚方法有可能被子类重写，故可以调子类重写的方法，若没重写，则调用父类虚方法
             //Parent parent;
             //parent = new Child();
             //parent.Work();
+            #endregion
+
+
+            #region 多态
+            ////多态是指在父类中定义的属性和方法被子类继承后，可以具有不同的数据类型或表现形式的能力
+            ////变量声明为父类类型，用子类类型去实例化，无法调用子类的方法
+
+            //IFly fly;
+            //fly = new Plane();
+            //fly = new Bird();
+
             #endregion
 
             #region 隐藏方法
@@ -89,14 +100,6 @@ namespace OOP
 
             #endregion
 
-            #region 多态
-            ////多态是同一个行为具有多个不同表现形式或形态的能力
-
-            //IFly fly;
-            //fly = new Plane();
-            //fly = new Bird();
-
-            #endregion
 
             #region 集合类List
 
@@ -104,6 +107,9 @@ namespace OOP
             //listClass.ListFunction();
 
             #endregion
+
+
+
 
 
             #region 泛型
@@ -115,8 +121,8 @@ namespace OOP
 
             #region 泛型方法
 
-            //Program program = new Program();
-            //program.GetResult<int>(10, 200);
+            Program program = new Program();
+            program.GetResult<string>("10", "200");
 
             #endregion
 
@@ -133,11 +139,10 @@ namespace OOP
         {
             dynamic num1 = a;
             dynamic num2 = b;
-            var result = (T)(num1 + num2);
+            var result = num1 + num2;
+            //var result = (dynamic)a + b;
             Console.WriteLine(result);
             return result;
         }
-
-
     }
 }

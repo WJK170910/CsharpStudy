@@ -7,6 +7,7 @@ namespace BasicKnowledgem
     {
         static void Main(string[] args)
         {
+            //修改项目名字：项目名字、命名空间、项目属性程序集名字、项目文件夹名字、sln的Project Name
 
             #region Write不换行、WriteLine会换行
 
