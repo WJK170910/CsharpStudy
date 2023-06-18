@@ -1,11 +1,12 @@
 ﻿using System;
 
-namespace Delegate
+namespace 委托
 {
     class Program
     {
-        ////委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用,没有方法体
-        ////本质是变量，故可以作为参数传递
+        ////委托是一种引用类型，表示对具有特定签名的方法的引用,没有方法体，签名：参数列表、返回值
+        ////本质是类，通过反射查看
+        ////应用场景：多线程
         delegate double Add(int x, int y);
         delegate int Method(int x);
         delegate string GetString();
@@ -46,6 +47,7 @@ namespace Delegate
             ////Action委托
             ////无返回值，可以有任意个参数
             Action action1 = program.TestActionDelegateMethod;
+            //action1.Invoke();
             Action<int, int> action = program.ActionMethod;
 
 
@@ -57,12 +59,15 @@ namespace Delegate
             Console.WriteLine(func(234, 234));
 
 
-            ////多播委托
+            #region 多播委托
+
             ////只会得到最后一个方法的结果
-            Method method1 = mathMethod.Add;
-            method1 += mathMethod.Multiply;
+            //Method method1 = mathMethod.Add;
+            //method1 += mathMethod.Multiply;
             //method1 -= mathMethod.Add;
-            Console.WriteLine(method1(10));
+            //Console.WriteLine(method1(10));
+
+            #endregion
 
             Console.ReadKey();
         }

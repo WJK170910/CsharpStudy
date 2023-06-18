@@ -1,5 +1,5 @@
 ﻿
-namespace Delegate
+namespace 委托
 {
     class MathMethod
     {
